@@ -107,6 +107,24 @@ const testimonialsList = [
         quote: "We consulted him for our daughter's marriage compatibility. Very knowledgeable and patient.",
         rating: 5,
         image: ""
+    },
+    {
+        name: "Anil Kumar",
+        quote: "Best astrologer in Hyderabad. His career guidance helped me switch jobs at the right time. Highly recommended!",
+        rating: 5,
+        image: ""
+    },
+    {
+        name: "Lakshmi Narayana",
+        quote: "Our family was facing severe health issues. Swamy gari remedies brought peace and health back to our home.",
+        rating: 5,
+        image: ""
+    },
+    {
+        name: "Priya Sharma",
+        quote: "Authentic and genuine. I visited for Vastu consultation for my new flat, and the changes he suggested were very effective.",
+        rating: 4,
+        image: ""
     }
 ];
 
