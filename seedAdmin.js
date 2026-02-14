@@ -12,19 +12,19 @@ const seedAdmin = async () => {
         console.log('MongoDB Connected...');
 
         // Check if admin exists
-        let admin = await Admin.findOne({ username: 'admin' });
+        let admin = await Admin.findOne({ username: 'Devadas' });
         if (admin) {
             console.log('Admin already exists');
             // If exists, just reset password or notify
-            console.log('Username: admin');
-            console.log('Password: password123');
+            console.log('Username: Devadas');
+            console.log('Password: Devadas@7');
             process.exit();
         }
 
         // Create new admin
         admin = new Admin({
-            username: 'admin',
-            password: 'password123'
+            username: 'Devadas',
+            password: 'Devadas@7'
         });
 
         const salt = await bcrypt.genSalt(10);

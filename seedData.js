@@ -96,12 +96,20 @@ const seedData = async () => {
         console.log('MongoDB Connected to Remote...');
 
         // 1. Seed Admin
-        let admin = await Admin.findOne({ username: 'admin' });
+        let admin = await Admin.findOne({ username: 'Devadas' });
         if (!admin) {
-            admin = new Admin({
-                username: 'admin',
-                password: 'password123'
-            });
+            // Check for old admin and rename if exists, otherwise create new
+            const oldAdmin = await Admin.findOne({ username: 'admin' });
+            if (oldAdmin) {
+                admin = oldAdmin;
+                admin.username = 'Devadas';
+                admin.password = 'Devadas@7'; // Will be hashed below
+            } else {
+                admin = new Admin({
+                    username: 'Devadas',
+                    password: 'Devadas@7'
+                });
+            }
             const salt = await bcrypt.genSalt(10);
             admin.password = await bcrypt.hash(admin.password, salt);
             await admin.save();
