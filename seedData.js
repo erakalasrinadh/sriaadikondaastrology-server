@@ -50,6 +50,30 @@ const servicesList = [
         description: 'Find the most auspicious dates and times for weddings, housewarmings, and new ventures.',
         icon: 'FaRing',
         image: ''
+    },
+    {
+        title: 'Numerology & Name Correction',
+        description: 'Unlock the power of numbers for business success and personal growth with name correction.',
+        icon: 'FaSortNumericDown',
+        image: ''
+    },
+    {
+        title: 'Gemstone Consultation',
+        description: 'Discover the right gemstone (Ratna) to amplify your luck, health, and prosperity.',
+        icon: 'FaGem',
+        image: ''
+    },
+    {
+        title: 'Evil Eye & Black Magic Removal',
+        description: 'Powerful spiritual remedies to cleanse negative energy and protect your family.',
+        icon: 'FaShieldAlt',
+        image: ''
+    },
+    {
+        title: 'Child & Education Astrology',
+        description: 'Guidance on progeny (Santana Bhagya) and education paths for your children.',
+        icon: 'FaChild',
+        image: ''
     }
 ];
 
