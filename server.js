@@ -16,18 +16,18 @@ const app = express();
 // Connect Database
 connectDB();
 
-// Init Middleware
+// Middleware
 app.use(express.json({ extended: false }));
 app.use(cors());
 
-// Define Routes
+// Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/services', require('./routes/services'));
 app.use('/api/testimonials', require('./routes/testimonials'));
 app.use('/api/gallery', require('./routes/gallery'));
 app.use('/api/contact', require('./routes/contact'));
 
-// Serve static assets in production
+// Static files (optional)
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/dist'));
 
@@ -36,6 +36,6 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+// ❌ REMOVE app.listen()
+// ✅ EXPORT APP FOR VERCEL
+module.exports = app;
